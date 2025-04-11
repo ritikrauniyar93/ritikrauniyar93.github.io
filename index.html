@@ -3,479 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ritik Rauniyar | Data Engineer & AI Engineer</title>
+  <title>Ritik Rauniyar | Data & AI Engineer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: #f9f9f9;
-      color: #333;
-      line-height: 1.6;
-      padding-top: 80px; /* Space for fixed header */
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* Header/Navigation */
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.97);
-      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-      z-index: 1000;
-      padding: 1.2rem 0;
-    }
-    
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #333;
-      text-decoration: none;
-    }
-    
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-    
-    .nav-links a {
-      color: #555;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s;
-      font-size: 1.1rem;
-    }
-    
-    .nav-links a:hover {
-      color: #6e8efb;
-    }
-
-    /* Hero Section */
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, #6e8efb, #a777e3);
-      color: white;
-      padding-top: 0;
-      margin-top: -80px;
-    }
-
-    .hero h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .hero .intro {
-      font-size: 1.8rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero .title {
-      font-size: 1.8rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-    }
-
-    .social-links {
-      margin: 2rem 0;
-    }
-
-    .social-links a {
-      color: white;
-      font-size: 1.8rem;
-      margin: 0 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .social-links a:hover {
-      transform: translateY(-5px);
-    }
-
-    .btn {
-      display: inline-block;
-      background: white;
-      color: #6e8efb;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    }
-
-    /* About Section */
-    .about {
-      padding: 6rem 0;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.8rem;
-      margin-bottom: 4rem;
-      color: #444;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #6e8efb;
-      margin: 1rem auto 0;
-    }
-
-    .bio {
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .bio p {
-      margin-bottom: 2rem;
-      font-size: 1.2rem;
-      line-height: 1.8;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin: 2rem 0 3rem;
-    }
-
-    .skills li {
-      background: #e0e7ff;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      color: #4a6bff;
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-
-    /* Experience Section */
-    .experience {
-      padding: 6rem 0;
-      background: #f0f4ff;
-    }
-
-    .timeline {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .timeline-item {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 10px;
-      margin-bottom: 2rem;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-      position: relative;
-    }
-
-    .timeline-item h3 {
-      color: #6e8efb;
-      margin-bottom: 0.5rem;
-      font-size: 1.5rem;
-    }
-
-    .timeline-item .date {
-      color: #777;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      display: inline-block;
-      background: #f0f4ff;
-      padding: 0.3rem 1rem;
-      border-radius: 50px;
-    }
-
-    .timeline-item ul {
-      margin-left: 1.5rem;
-    }
-
-    .timeline-item li {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Projects Section */
-    .projects {
-      padding: 6rem 0;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .project-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    }
-
-    .project-card h3 {
-      color: #6e8efb;
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .project-card .tech {
-      color: #777;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .project-card ul {
-      margin: 1.5rem 0 2rem 1.5rem;
-    }
-
-    .project-card ul li {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 6rem 0;
-      background: #f0f4ff;
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      background: white;
-      padding: 3rem;
-      border-radius: 10px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-    }
-
-    .form-group {
-      margin-bottom: 1.8rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-      color: #555;
-    }
-
-    .form-control {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 1rem;
-      transition: all 0.3s;
-    }
-
-    .form-control:focus {
-      border-color: #6e8efb;
-      box-shadow: 0 0 0 3px rgba(110, 142, 251, 0.1);
-      outline: none;
-    }
-
-    textarea.form-control {
-      min-height: 180px;
-      resize: vertical;
-    }
-
-    .form-status {
-      margin: 1.5rem 0;
-      padding: 1rem;
-      border-radius: 5px;
-      display: none;
-      font-size: 1rem;
-    }
-
-    .success {
-      background: #d4edda;
-      color: #155724;
-      display: block;
-    }
-
-    .error {
-      background: #f8d7da;
-      color: #721c24;
-      display: block;
-    }
-
-    .submit-btn {
-      width: 100%;
-      position: relative;
-    }
-
-    .spinner {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      display: none;
-    }
-
-    .submit-btn.loading .spinner {
-      display: block;
-    }
-
-    .submit-btn.loading .btn-text {
-      opacity: 0;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem;
-      background: #6e8efb;
-      color: white;
-    }
-
-    .footer-text {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .footer-links a {
-      color: white;
-      font-size: 1.5rem;
-      transition: all 0.3s;
-    }
-
-    .footer-links a:hover {
-      transform: translateY(-3px);
-    }
-
-    .copyright {
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    /* Responsive */
-    @media (max-width: 992px) {
-      .hero h1 {
-        font-size: 3.2rem;
-      }
-      .hero .intro, .hero .title {
-        font-size: 1.5rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding-top: 70px;
-      }
-      
-      header {
-        padding: 1rem 0;
-      }
-      
-      .logo {
-        font-size: 1.5rem;
-      }
-      
-      .nav-links {
-        gap: 1.5rem;
-      }
-      
-      .nav-links a {
-        font-size: 1rem;
-      }
-      
-      .hero {
-        margin-top: -70px;
-      }
-      
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-      
-      .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 3rem;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-      
-      .contact-form {
-        padding: 2rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .nav-links {
-        gap: 1rem;
-      }
-      
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      
-      .hero .intro, .hero .title {
-        font-size: 1.2rem;
-      }
-      
-      .btn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-      }
-      
-      .skills li {
-        padding: 0.6rem 1.2rem;
-        font-size: 1rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header/Navigation -->
@@ -490,16 +21,33 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </div>
+        <div class="mobile-menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero" id="home">
+    <!-- Pure CSS Laptop -->
+    <div class="css-laptop">
+      <div class="screen">
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+        <div class="code-line"></div>
+      </div>
+      <div class="keyboard"></div>
+    </div>
     <div class="container">
       <p class="intro">Hi there! I am</p>
       <h1>Ritik Rauniyar</h1>
-      <p class="title">I am a Data Engineer & AI Engineer</p>
+      <div class="title-container">
+        <div class="title-words">
+          <div class="title-word">Data Engineer</div>
+          <div class="title-word">AI Engineer</div>
+        </div>
+      </div>
       <div class="social-links">
         <a href="https://github.com/ritikrauniyar93" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/ritik-rauniyar-208758260/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -515,18 +63,26 @@
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="bio">
-        <p>I'm a <strong>Computer Science graduate</strong> passionate about data analytics, machine learning, and IoT. With hands-on experience at IBM and IIoT training, I specialize in transforming raw data into actionable insights.</p>
-        <h3>Skills</h3>
-        <ul class="skills">
-          <li>Python</li>
-          <li>TensorFlow</li>
-          <li>SQL</li>
-          <li>Pandas</li>
-          <li>React</li>
-          <li>FastAPI</li>
-        </ul>
-        <h3>Education</h3>
-        <p><strong>B.Tech in Computer Science</strong><br>Kalinga University (2021-2025)</p>
+        <div class="animated-card">
+          <p class="animated-text">I'm a <strong>Data Engineer & AI Engineer</strong> passionate about data analytics, machine learning, and IoT. With hands-on experience at IBM and IIoT training, I specialize in transforming raw data into actionable insights.</p>
+        </div>
+        
+        <div class="skills-container">
+          <h3 class="skills-title">Skills</h3>
+          <ul class="skills">
+            <li class="skill-item">Python</li>
+            <li class="skill-item">Web developer</li>
+            <li class="skill-item">SQL</li>
+            <li class="skill-item">Pandas</li>
+            <li class="skill-item">React</li>
+            <li class="skill-item">c/c++</li>
+          </ul>
+        </div>
+        
+        <div class="education-card">
+          <h3>Education</h3>
+          <p><strong>B.Tech in Computer Science & Engineering</strong><br>Kalinga University (2021-2025)</p>
+        </div>
       </div>
     </div>
   </section>
@@ -534,60 +90,132 @@
   <!-- Experience Section -->
   <section class="experience" id="experience">
     <div class="container">
-      <h2 class="section-title">Experience</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <h3>Data Analytics Intern</h3>
-          <p class="date">IBM | 2023</p>
-          <ul>
-            <li>Cleaned and visualized large datasets using Pandas/NumPy.</li>
-            <li>Built ML models for predictive analytics.</li>
-            <li>Conducted EDA to identify trends and anomalies.</li>
-          </ul>
+      <h2 class="section-title">Professional Journey</h2>
+      <div class="timeline-tree">
+        <!-- IBM Experience -->
+        <div class="tree-node">
+          <div class="tree-connector"></div>
+          <div class="tree-card">
+            <div class="tree-date">2023</div>
+            <h3 class="tree-role">Data Analytics Intern @ IBM</h3>
+            <ul class="tree-details">
+              <li><i class="fas fa-circle"></i> Cleaned and visualized large datasets using Pandas/NumPy</li>
+              <li><i class="fas fa-circle"></i> Built ML models for predictive analytics</li>
+              <li><i class="fas fa-circle"></i> Conducted EDA to identify trends and anomalies</li>
+            </ul>
+            <div class="tree-icon"><i class="fas fa-briefcase"></i></div>
+          </div>
         </div>
-        <div class="timeline-item">
-          <h3>IIoT & Robotics Training</h3>
-          <p class="date">Hands-on Program | 2022</p>
-          <ul>
-            <li>Developed IoT-based automation systems for industrial processes.</li>
-            <li>Implemented cloud-based sensor monitoring for anomaly detection.</li>
-          </ul>
+        
+        <!-- IIoT Experience -->
+        <div class="tree-node">
+          <div class="tree-connector"></div>
+          <div class="tree-card">
+            <div class="tree-date">2022</div>
+            <h3 class="tree-role">IIoT & Robotics Training</h3>
+            <ul class="tree-details">
+              <li><i class="fas fa-circle"></i> Developed IoT-based automation systems</li>
+              <li><i class="fas fa-circle"></i> Implemented cloud-based sensor monitoring</li>
+            </ul>
+            <div class="tree-icon"><i class="fas fa-robot"></i></div>
+          </div>
+        </div>
+        
+        <!-- Root Node -->
+        <div class="tree-root">
+          <div class="root-icon"><i class="fas fa-seedling"></i></div>
+          <div class="root-text">Career Beginnings</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section class="projects" id="projects">
+  <section class="projects-section" id="projects">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">My Projects</h2>
+      
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data">Data Science</button>
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+      </div>
+      
       <div class="projects-grid">
-        <div class="project-card">
-          <h3>Ride-Sharing Analytics Platform</h3>
-          <p class="tech">Python, Pandas, ML</p>
-          <ul>
-            <li>Optimized ride-sharing services using demand prediction.</li>
-            <li>Reduced idle vehicle time by 30%.</li>
-          </ul>
-          <a href="#" class="btn"><i class="fab fa-github"></i> View Code</a>
+        <!-- Project 1 -->
+        <div class="project-card" data-category="data">
+          <div class="project-image-container">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Ride-Sharing Analytics" class="project-image">
+            <div class="project-overlay">
+              <h3 class="project-title">Ride-Sharing Analytics Platform</h3>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Ride-Sharing Analytics Platform</h3>
+            <p class="project-description">Optimized ride-sharing services using demand prediction algorithms and geospatial analysis.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">GeoPandas</span>
+              <span class="tech-tag">Scikit-learn</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="project-link secondary"><i class="fab fa-github"></i> View Code</a>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h3>Brain MRI Tumor Detection</h3>
-          <p class="tech">TensorFlow, CNN</p>
-          <ul>
-            <li>Built a CNN model with 95% accuracy.</li>
-            <li>Integrated Grad-CAM for interpretability.</li>
-          </ul>
-          <a href="#" class="btn"><i class="fab fa-github"></i> View Code</a>
+        
+        <!-- Project 2 -->
+        <div class="project-card" data-category="ai">
+          <div class="project-image-container">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Brain MRI Analysis" class="project-image">
+            <div class="project-overlay">
+              <h3 class="project-title">Brain MRI Tumor Detection</h3>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Brain MRI Tumor Detection</h3>
+            <p class="project-description">CNN model for detecting tumors in brain MRI scans with explainable AI features.</p>
+            <div class="project-tech">
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">Keras</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">Grad-CAM</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="project-link secondary"><i class="fab fa-github"></i> View Code</a>
+            </div>
+          </div>
         </div>
-        <div class="project-card">
-          <h3>Real-Time Chat App</h3>
-          <p class="tech">Firebase, Android</p>
-          <ul>
-            <li>Featured messaging, media sharing, and auth.</li>
-            <li>Published research paper.</li>
-          </ul>
-          <a href="#" class="btn"><i class="fab fa-github"></i> View Code</a>
+        
+        <!-- Project 3 -->
+        <div class="project-card" data-category="web">
+          <div class="project-image-container">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                 alt="Real-Time Chat App" class="project-image">
+            <div class="project-overlay">
+              <h3 class="project-title">Real-Time Chat Application</h3>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Real-Time Chat Application</h3>
+            <p class="project-description">Secure messaging platform with end-to-end encryption and media sharing capabilities.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Firebase</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">WebSockets</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="#" class="project-link secondary"><i class="fab fa-github"></i> View Code</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -597,35 +225,115 @@
   <section class="contact" id="contact">
     <div class="container">
       <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-form">
-        <form id="contactForm" action="https://formspree.io/f/xzzejpjy" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" class="form-control" required>
+      
+      <div class="contact-flex-container">
+        <!-- Left Column - Profile Picture -->
+        <div class="contact-profile-column">
+          <div class="profile-pic-holographic">
+            <div class="profile-pic-wrapper">
+              <img src="assets/profile.png" alt="Ritik Rauniyar" class="profile-pic">
+              <div class="holographic-effect"></div>
+              <div class="profile-pic-border"></div>
+            </div>
+            <div class="profile-social-links">
+              <a href="https://github.com/ritikrauniyar93" target="_blank" class="social-circle">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/ritik-rauniyar-208758260/" target="_blank" class="social-circle">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:ritikrauniyar@gmail.com" class="social-circle">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="_replyto" class="form-control" required>
+        </div>
+        
+        <!-- Right Column - Contact Info and Form -->
+        <div class="contact-content-column">
+          <div class="contact-container">
+            <!-- Animated Contact Info Cards -->
+            <div class="contact-info">
+              <div class="info-card animated-card" style="--delay: 0.1s">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Email Me</h3>
+                  <a href="mailto:ritikrauniyar@gmail.com">ritikrauniyar@gmail.com</a>
+                </div>
+              </div>
+              
+              <div class="info-card animated-card" style="--delay: 0.2s">
+                <div class="info-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Location</h3>
+                  <p>Raipur, India</p>
+                </div>
+              </div>
+              
+              <div class="info-card animated-card" style="--delay: 0.3s">
+                <div class="info-icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="info-content">
+                  <h3>Schedule a Call</h3>
+                  <a href="#" class="schedule-btn">Book Meeting</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Animated Contact Form -->
+            <div class="contact-form animated-card" style="--delay: 0.4s">
+              <form id="contactForm" action="https://formspree.io/f/xzzejpjy" method="POST">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" class="form-control" required>
+                  <label for="name">Your Name</label>
+                  <span class="focus-border"></span>
+                </div>
+                
+                <div class="form-group">
+                  <input type="email" id="email" name="_replyto" class="form-control" required>
+                  <label for="email">Your Email</label>
+                  <span class="focus-border"></span>
+                </div>
+                
+                <input type="hidden" name="_subject" value="New message from portfolio">
+                
+                <div class="form-group">
+                  <textarea id="message" name="message" class="form-control" required></textarea>
+                  <label for="message">Your Message</label>
+                  <span class="focus-border"></span>
+                </div>
+                
+                <div id="formStatus" class="form-status"></div>
+                
+                <button type="submit" class="btn submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                  <span class="spinner"><i class="fas fa-spinner fa-spin"></i></span>
+                </button>
+              </form>
+            </div>
           </div>
-          <input type="hidden" name="_subject" value="New message from portfolio">
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" class="form-control" required></textarea>
-          </div>
-          <div id="formStatus" class="form-status"></div>
-          <button type="submit" class="btn submit-btn">
-            <span class="btn-text">Send Message</span>
-            <span class="spinner"><i class="fas fa-spinner fa-spin"></i></span>
-          </button>
-        </form>
+        </div>
       </div>
+    </div>
+    
+    <!-- Floating contact elements -->
+    <div class="contact-dots">
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
     <div class="container">
-      <p class="footer-text">Let's build something amazing together</p>
+      <p class="footer-text"></p>
       <div class="footer-links">
         <a href="https://github.com/ritikrauniyar93" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/ritik-rauniyar-208758260/" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -635,57 +343,6 @@
     </div>
   </footer>
 
-  <script>
-    // Form submission handler
-    document.getElementById('contactForm').addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const button = form.querySelector('.submit-btn');
-      const statusDiv = document.getElementById('formStatus');
-      
-      // Reset status
-      statusDiv.style.display = 'none';
-      statusDiv.className = 'form-status';
-      
-      try {
-        // Show loading state
-        button.classList.add('loading');
-        
-        const response = await fetch(form.action, {
-          method: 'POST',
-          body: new FormData(form),
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
-        
-        if (response.ok) {
-          statusDiv.textContent = 'Thank you! Your message has been sent successfully.';
-          statusDiv.className = 'form-status success';
-          form.reset();
-        } else {
-          const errorData = await response.json();
-          throw new Error(errorData.error || 'Form submission failed');
-        }
-      } catch (error) {
-        statusDiv.textContent = `Error: ${error.message}. Please email me directly at ritikrauniyar@gmail.com`;
-        statusDiv.className = 'form-status error';
-        console.error('Form submission error:', error);
-      } finally {
-        button.classList.remove('loading');
-        statusDiv.style.display = 'block';
-      }
-    });
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
