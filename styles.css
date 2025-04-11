@@ -9,7 +9,7 @@
   --dark: #5d5db0;
   --darker: #6c6cd0;
   --light: #f9f9f9;
-  --text: ##000000;
+  --text: #000000;
   --text-light: #fbfafe;
   --white: #ffffff;
   --neon-glow: 0 0 15px rgba(110, 142, 251, 0.6);
@@ -1307,4 +1307,70 @@ footer {
 }
 .typing-delay-3 {
   animation-delay: 1.5s;
+}
+/* ==================== */
+/* Responsive (Mobile View) */
+/* ==================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 0.8rem 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: -60px;
+  }
+
+  #typewriter {
+    font-size: 2rem;
+    height: auto;
+  }
+
+  .title-word {
+    font-size: 1.4rem;
+  }
+
+  .hero-actions {
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .social-links a {
+    font-size: 1.4rem;
+  }
+
+  .css-laptop {
+    width: 90%;
+    max-width: 400px;
+  }
 }
